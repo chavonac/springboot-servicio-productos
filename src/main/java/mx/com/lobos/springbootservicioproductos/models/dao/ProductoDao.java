@@ -5,8 +5,9 @@
  */
 package mx.com.lobos.springbootservicioproductos.models.dao;
 
-import mx.com.lobos.springbootservicioproductos.models.entity.Producto;
+
 import org.springframework.data.repository.CrudRepository;
+import mx.com.lobos.models.entity.Producto;
 
 /**
  *

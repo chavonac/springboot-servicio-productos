@@ -6,8 +6,9 @@
 package mx.com.lobos.springbootservicioproductos.models.service;
 
 import java.util.List;
+
+import mx.com.lobos.models.entity.Producto;
 import mx.com.lobos.springbootservicioproductos.models.dao.ProductoDao;
-import mx.com.lobos.springbootservicioproductos.models.entity.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -33,5 +34,17 @@ public class ProductosServiceImpl implements IProductoService {
     public Producto findById(Long id) {
         return productoDao.findById(id).orElse(null);
     }
+
+	@Override
+	@Transactional
+	public Producto save(Producto producto) {
+		return productoDao.save(producto);
+	}
+
+	@Override
+	@Transactional
+	public void deleteById(Long id) {
+		productoDao.deleteById(id);
+	}
     
 }

@@ -6,7 +6,9 @@
 package mx.com.lobos.springbootservicioproductos.models.service;
 
 import java.util.List;
-import mx.com.lobos.springbootservicioproductos.models.entity.Producto;
+
+import mx.com.lobos.models.entity.Producto;
+
 
 /**
  *
@@ -17,4 +19,8 @@ public interface IProductoService {
     public List<Producto> findAll();
 
     public Producto findById(Long id);
+    
+    public Producto save(Producto producto);
+    
+    public void deleteById(Long id);
 }

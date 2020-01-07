@@ -15,9 +15,9 @@
 	<packaging>${packaging.type}</packaging>
 	<name>springboot-servicio-productos</name>
 	<description>Demo project for Spring Boot</description>
-	
+
 	<properties>
-	    <packaging.type>war</packaging.type>
+		<packaging.type>war</packaging.type>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -59,6 +59,12 @@
 				spring-cloud-starter-netflix-eureka-client
 			</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>mx.com.lobos</groupId>
+			<artifactId>springboot-servicio-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -69,7 +75,7 @@
 			</plugin>
 		</plugins>
 	</build>
-    
+
 	<profiles>
 		<profile>
 			<id>jar</id>
